@@ -7,14 +7,14 @@ RUN apt-get install -y python3-dev
 RUN apt-get install -y python3-pip 
 RUN apt-get install -y git 
 RUN apt-get clean
-RUN cd /opt && git clone https://github.com/IM-TECHNO/devops-meta.git
-RUN cd /opt/devops-meta && git pull
+RUN cd /opt && git clone https://github.com/HariHaran1214/Spider.git
+RUN cd /opt/Spider && git pull
 
 RUN python3 -m pip install --upgrade pip
 
-RUN pip3 install -r /opt/devops-meta/requirements.txt
+RUN pip3 install -r /opt/Spider/requirements.txt
 
-WORKDIR /opt/devops-meta
+WORKDIR /opt/Spider
 
 EXPOSE 8080
 ENTRYPOINT [ "python3" ]
