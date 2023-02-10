@@ -12,8 +12,6 @@ RUN cd /opt/Spider && git pull
 
 RUN python3 -m pip install --upgrade pip
 
-RUN pip3 install -r /opt/Spider
-
 WORKDIR /opt/Spider
 
 EXPOSE 8080
